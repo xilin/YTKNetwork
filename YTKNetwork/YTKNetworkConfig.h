@@ -74,6 +74,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) BOOL debugLogEnabled;
 ///  SessionConfiguration will be used to initialize AFHTTPSessionManager. Default is nil.
 @property (nonatomic, strong) NSURLSessionConfiguration* sessionConfiguration;
+///  Process request arguments
+@property(nonatomic, copy) id (^requestArgumentProcessor)(id);
 
 ///  Add a new URL filter.
 - (void)addUrlFilter:(id<YTKUrlFilterProtocol>)filter;
